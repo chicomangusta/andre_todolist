@@ -30,8 +30,7 @@
        </ul>
 
        <div className="sidebar_middle">
-           <spam><FaChevronDown /> 
-           </spam>
+           <span><FaChevronDown /></span>
            <h2>Project</h2>
        </div>
 

@@ -2,52 +2,47 @@
 //============================================================
 
 import { useState, useEffect } from 'react';
-import { firebase } from '../firebase'
+import moment from 'moment';
+import { firebase } from '../firebase';
 import { collatedTasksExist } from '../helpers';
-import moment from "moment";
+
+export const useTasks = selectedProject => {
+  const [tasks, setTasks] = useState([]);
+  const [archivedTasks, setArchivedTasks] = useState([]);
+
+  useEffect(() => {
+    let unsubscribe = firebase
+      .firestore()
+      .collection('tasks')
+      .where('userId', '==', 'bart1104');// Go to Firebase and use my ID == this
 
 
-export const useTasks = selectProject => {
-    const [tasks, setTasks] = useState([]);
-    const [archivedTasks, setArchivedTasks] = useState([]);
-    
-
-    useEffect(() => {
-        let unsubscribe = firebase
-        .firestore()
-        .collection('tasks')
-        .where('userId', '==', 'bart1104');// Go to Firebase and use my ID == this
-
-
-        unsubscribe = selectProject && !collatedTasksExist(selectProject) ? 
-        (unsubscribe = unsubscribe.where('projectId', '==', selectProject)) 
-        : selectProject === 'TODAY'
+        unsubscribe = selectedProject && !collatedTasksExist(selectedProject) ? 
+        (unsubscribe = unsubscribe.where('projectId', '==', selectedProject)) 
+        : selectedProject === 'TODAY'
         ? (unsubscribe = unsubscribe.where('date', '==', moment().format('DD/MM/YYYY')))//moment() to manage time zones
-        : selectProject === 'INBOX' || selectProject === 0 
+        : selectedProject === 'INBOX' || selectedProject === 0 
         ? (unsubscribe = unsubscribe.where('date', '==', '')) 
         :unsubscribe;// GO THRU ALL THE TASKS AND SELECT THE KEY AND GIVE ME THE PROJECTS
 
     unsubscribe = unsubscribe.onSnapshot((snapshot) => {
-      const newTask = snapshot.docs.map((task) => ({
+      const newTasks = snapshot.docs.map((task) => ({
         id: task.id,
         ...task.data(),
       }));
 
       setTasks(
-        selectedProject === "NEXT_7"
-          ? newTasks.filter(
-              (task) =>
-                moment(task.date, "DD-MM-YYYY").diff(moment(), "days") <= 7 && //.diff() is the difference between two dates in days
-                task.archived !== true
-            )
-          : newTasks.filter((task) => task.archived !== true)
-      );
+          selectedProject === 'NEXT_7' ?
+          newTasks.filter(task =>
+          moment(task.date, 'DD-MM-YYYY').diff(moment(), 'days') <= 7 && //.diff() is the difference between two dates in days
+          task.archived !== true): newTasks.filter(task => task.archived !== true));
+                 
       setArchivedTasks(newTasks.filter((task) => task.archived !== false));// show all the tasks that are true
     });
 
-    return () => unsubscribe();
 
-    }, [selectProject]);//when this changes re-run all the above functions
+    return () => unsubscribe();
+    }, [selectedProject]); //when this changes re-run all the above functions
 
 
     return { tasks, archivedTasks };
