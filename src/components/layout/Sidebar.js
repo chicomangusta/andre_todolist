@@ -11,18 +11,18 @@
  
     <div className="Sidebar" data-testid="sidebar">
        <ul className="sidebar__generic">
-           <li>
+           <li className="inbox" data-testid="inbox">
                <span><FaInbox />
                </span>
                <span>Inbox</span>
             </li>
 
-           < li > < span > < FaRegCalendar />
+           <li className="today" data-testid="today"> < span > < FaRegCalendar />
                </span>
                <span>Today</span>
             </li>
 
-           <li><span><FaRegCalendarAlt />
+           <li className="next_7" data-testid="next_7"><span><FaRegCalendarAlt />
                </span>
                <span>Next 7 days</span>
             </li>
@@ -37,7 +37,6 @@
 
 
        <ul className="sidebar__projects">Projects will be Here</ul>
-
        Add Project Component Here!
     </div>
  );
