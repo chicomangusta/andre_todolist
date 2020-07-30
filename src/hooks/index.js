@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import { firebase } from '../firebase';
 import { collatedTasksExist } from '../helpers';
+//============================================================
+
 
 export const useTasks = selectedProject => {
   const [tasks, setTasks] = useState([]);
@@ -56,7 +58,7 @@ export const useProjects = () => {
     firebase
       .firestore() //go to firestore
       .collection('projects') // get collection, projects
-      .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw') // set the user ID
+      .where('userId', '==', 'bart1104') // set the user ID
       .orderBy('projectId') //order by the ID of the project
       .get() //get  
       .then(snapshot => {// data from a database location

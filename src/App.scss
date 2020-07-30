@@ -28,7 +28,6 @@ body {
    font-smooth: always;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-
 }
 
 ul {
@@ -740,3 +739,21 @@ header {
       @include cancel();
    }
 }
+
+
+// &
+// The & comes in handy when you’re nesting and you want to create a more specific selector, 
+// like an element that has *both* of two classes.
+// The & always refers to the parent selector when nesting. Think of the & as being removed and 
+// replaced with the parent selector.
+//============================================================================================
+
+// @MIXIN and @INCLUDED
+// Mixins allow you to define styles that can be re-used throughout your stylesheet. 
+// They make it easy to avoid using non-semantic classes like .float-left, and to distribute 
+// collections of styles in libraries.
+// They can be used to encapsulate styles that can be dropped into a single style rule; 
+// they can contain style rules of their own that can be nested in other rules or 
+// included at the top level of the stylesheet; or they can just serve to modify variables.
+//============================================================================================
+
