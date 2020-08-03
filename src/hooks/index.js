@@ -9,14 +9,14 @@ import { collatedTasksExist } from '../helpers';
 
 
 export const useTasks = selectedProject => {
-  const [tasks, setTasks] = useState([]);
-  const [archivedTasks, setArchivedTasks] = useState([]);
+    const [tasks, setTasks] = useState([]);
+    const [archivedTasks, setArchivedTasks] = useState([]);
 
   useEffect(() => {
-    let unsubscribe = firebase
-      .firestore()
-      .collection('tasks')
-      .where('userId', '==', 'bart1104');// Go to Firebase and use my ID == this
+        let unsubscribe = firebase
+          .firestore()
+          .collection('tasks')
+          .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw'); // Go to Firebase and use my ID == this
 
 
         unsubscribe = selectedProject && !collatedTasksExist(selectedProject) ? 
@@ -27,20 +27,21 @@ export const useTasks = selectedProject => {
         ? (unsubscribe = unsubscribe.where('date', '==', '')) 
         :unsubscribe;// GO THRU ALL THE TASKS AND SELECT THE KEY AND GIVE ME THE PROJECTS
 
-    unsubscribe = unsubscribe.onSnapshot((snapshot) => {
-      const newTasks = snapshot.docs.map((task) => ({
-        id: task.id,
-        ...task.data(),
-      }));
+    unsubscribe = unsubscribe.onSnapshot(snapshot => {
+          const newTasks = snapshot.docs.map(task => ({
+            id: task.id,
+            ...task.data(),
+          }));
 
       setTasks(
           selectedProject === 'NEXT_7' ?
-          newTasks.filter(task =>
-          moment(task.date, 'DD-MM-YYYY').diff(moment(), 'days') <= 7 && //.diff() is the difference between two dates in days
-          task.archived !== true): newTasks.filter(task => task.archived !== true));
+          newTasks.filter(
+            task =>
+            moment(task.date, 'DD-MM-YYYY').diff(moment(), 'days') <= 7 && //.diff() is the difference between two dates in days
+            task.archived !== true): newTasks.filter(task => task.archived !== true));
                  
-      setArchivedTasks(newTasks.filter((task) => task.archived !== false));// show all the tasks that are true
-    });
+      setArchivedTasks(newTasks.filter(task => task.archived !== false));
+      });
 
 
     return () => unsubscribe();
