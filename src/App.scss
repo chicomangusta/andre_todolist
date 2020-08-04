@@ -143,19 +143,47 @@ $generic-bg: #4AA4B2;
    header {
       -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-      background-color: #282828;
+      background-color: #003239;
       border-color: transparent;
    }
 
    .sidebar {
       -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.30);
-      background-color: #4A4D5B;
+      background-color: #1C5962;
       border-color: transparent;
       color:#F2F2F2;
    }
    .tasks { 
-      background-color: #7C7D86;
+      background-color: #505F61;
+   }
+
+   .asks__list {
+      color: white;
+   }
+
+   .add-project__text {
+      color:white;
+   }
+
+   .middle_project {
+      color:white;
+   }
+
+   h2 {
+      color:white;
+   }
+
+   .next_7 {
+      color:white;
+   }
+
+   .today {
+      color:white;
+   }
+
+   .inbox {
+      color: white;
    }
   
    
