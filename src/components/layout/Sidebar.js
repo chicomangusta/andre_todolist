@@ -4,6 +4,8 @@ import { Projects } from '../Projects';
 import { useSelectedProjectValue } from '../../context';
 import { AddProject } from '../AddProject';
 
+
+
 export const Sidebar = () => {
   const { setSelectedProject } = useSelectedProjectValue();
   const [active, setActive] = useState('inbox');

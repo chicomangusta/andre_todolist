@@ -22,7 +22,7 @@ body {
    line-height: 1;
    font-family: 'Roboto', sans-serif;
    color: #202020;
-   background-color: #fafafa;
+   background-color: #C0C0C0;
    font-smooth: always;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
@@ -139,23 +139,30 @@ $generic-bg: #4AA4B2;
 
 /* DARKMODE
   ============================================ */
-.darkmode {
+
+
+  .darkmode {
+
+   body {
+      background-color: #333748;
+   }
+
    header {
       -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-      background-color: #003239;
+      background-color: #343542;
       border-color: transparent;
    }
 
    .sidebar {
       -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.30);
-      background-color: #1C5962;
+      background-color: #6A6B73;
       border-color: transparent;
       color:#F2F2F2;
    }
    .tasks { 
-      background-color: #505F61;
+      background-color: #A3A3AF;
    }
 
    .asks__list {
@@ -234,6 +241,9 @@ header {
             img {
                width: 90px;
                height: 60px;
+               border: 1px solid black;
+               border-radius: 10px;
+               box-shadow: 1px 1px  rgba(0, 0, 0, 0.5);
             }
 
          }
