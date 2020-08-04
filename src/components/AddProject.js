@@ -56,7 +56,7 @@ export const AddProject = ({ shouldShow = false }) => {
               if (e.key === 'Enter') setShow(false);
             }}
             role="button"
-            tabIndex={0}
+            tabIndex={-1}
           >
             Cancel
           </span>

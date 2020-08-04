@@ -170,7 +170,7 @@ header {
    transition: height 200ms ease-in;
    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-   height: 44px;
+   height: 60px;
    z-index: 400;
    position: fixed;
    top: 0;
@@ -204,8 +204,8 @@ header {
             grid-area: 1 / 1;
 
             img {
-               width: 60px;
-               height: 40px;
+               width: 90px;
+               height: 60px;
             }
 
          }
@@ -352,6 +352,36 @@ header {
             color: #af38eb;
          }
       }
+      
+      &:nth-child(6) {
+         .sidebar__dot {
+            color: #470668;
+         }
+      }
+
+      &:nth-child(7) {
+         .sidebar__dot {
+            color: #df079b;
+         }
+      }
+
+      &:nth-child(8) {
+         .sidebar__dot {
+            color: #053fbb;
+         }
+      }
+
+      &:nth-child(9) {
+         .sidebar__dot {
+            color: #3fd815;
+         }
+      }
+
+      &:nth-child(10) {
+         .sidebar__dot {
+            color: #da501a;
+         }
+      }
    }
 
    &__projects {
@@ -448,6 +478,7 @@ header {
    width: 200px;
    margin-top: 50px;
    border-radius: 10px;
+   
 
     &__inner {
        @include box-overlay();
@@ -457,6 +488,8 @@ header {
        top: 10px;
        right: 50px;
        background-color: white;
+       border: 1.5px solid red;
+       border-radius: 5px;
 
       p {
          color: black;
@@ -469,6 +502,8 @@ header {
 
       button {
          @include btn('50px');
+         margin-top: -1px;
+         margin-left: 15px;
       }
 
       span {
@@ -547,8 +582,8 @@ header {
 
          .checkbox {
             cursor: pointer;
-            border-color: gray;
-            color: #343434;
+            border-color: #4AA4B2;
+            color: #4AA4B2;
             height: 16px;
             width: 16px;
             display: block;

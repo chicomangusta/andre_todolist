@@ -42,7 +42,7 @@ export const IndividualProject = ({ project }) => {
         {showConfirm && (
           <div className="project-delete-modal">
             <div className="project-delete-modal__inner">
-              <p> Delete this project?</p>
+              <p> Delete project?</p>
               <button
                 type="button"
                 onClick={() => deleteProject(project.docId)}>
@@ -60,7 +60,7 @@ export const IndividualProject = ({ project }) => {
                 aria-label="Cancel adding project, do not delete">
 
                 Cancel
-                
+
               </span>
             </div>
           </div>
