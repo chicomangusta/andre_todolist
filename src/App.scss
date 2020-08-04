@@ -1,7 +1,7 @@
 /* ==========================================================================
    ANDRE TODOLIST
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700,900');
 
 // General Settings
 html {
@@ -828,6 +828,15 @@ header {
    &__cancel {
       @include cancel();
    }
+}
+/* FOOTER
+  ============================================ */
+.footer {
+   margin-top: 1005px;
+   margin-left: -500px;
+   font-family: "Roboto", sans-serif;
+   font-size: 12px;
+   font-weight: 100;
 }
 
 
