@@ -7,7 +7,7 @@
 ### The user can create a new project and add tasks to it, and after the tasks are completed they can check them out of the project.
 ### In the future the APP will include a calendar and a alert system that will send a message to the users email, like an reminder. 
 
-
+<br />
 
 ## **WIREFRAMES:**
 
@@ -24,7 +24,7 @@
 ![](https://res.cloudinary.com/dqiighjqq/image/upload/v1596572732/2du_final_szkvgb.png)
 
 
-
+<br />
 
 ## **Technologies Used:**
 
@@ -50,7 +50,7 @@ HTML5
 
 ColorSlurp
 
-# **--------------------------**
+<br />
 
 APP link: https://andre-todolist.web.app
 
@@ -59,7 +59,7 @@ APP link: https://andre-todolist.web.app
 
 
 
-
+<br />
 
 
 
