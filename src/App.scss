@@ -137,6 +137,7 @@ $generic-bg: #4AA4B2;
    }
 }
 
+
 /* DARKMODE
   ============================================ */
 
@@ -418,6 +419,12 @@ header {
       &:nth-child(10) {
          .sidebar__dot {
             color: #da501a;
+         }
+      }
+
+      &:nth-child(11) {
+         .sidebar__dot {
+            color: #f432f4;
          }
       }
    }
