@@ -28,27 +28,27 @@
 
 ## **Technologies Used:**
 
-React
+👉 React
 
-JavaScript
+👨🏻‍💻 JavaScript
 
-SCSS
+🎨 SCSS
 
-NPM React
+🤟 NPM React
 
-FontAwesome
+⛲️ FontAwesome
 
-Cloudinary
+🌆 Cloudinary
 
-Adobe Photoshop
+📸 Adobe Photoshop
 
-FireBase - Database
+🔥 FireBase - Database
 
-FireBase - Hosting
+🔥 FireBase - Hosting
 
-HTML5
+🖥 HTML5
 
-ColorSlurp
+🖍 ColorSlurp
 
 <br />
 
