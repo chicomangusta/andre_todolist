@@ -16,6 +16,10 @@ export const Header = ({ darkMode, setDarkMode }) => {
         <div className="logo">
           < img src = "/images/img1.png" alt = "Todoist" />
         </div>
+
+        <div className="name-header" data-testid="name">
+          <h1>HOME - TO DO LIST</h1>
+        </div>
         <div className="settings">
           <ul>
             <li className="settings__add">

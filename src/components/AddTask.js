@@ -74,7 +74,7 @@ export const AddTask = ({
           role="button"
         >
           <span className="add-task__plus">+</span>
-          <span className="add-task__text">Add Task</span>
+          <span className="add-task__text">🏋🏻‍♂️ New Task 🏋🏻‍♂️</span>
         </div>
       )}
 

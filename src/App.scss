@@ -1,7 +1,9 @@
 /* ==========================================================================
    ANDRE TODOLIST
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700,900');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;900&display=swap');
+
 
 // General Settings
 html {
@@ -20,10 +22,10 @@ body {
    margin: 0;
    padding: 0;
    line-height: 1;
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Montserrat',
+   sans-serif;
    color: #202020;
    background-color: #C0C0C0;
-   font-smooth: always;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
@@ -42,12 +44,12 @@ $generic-bg: #4AA4B2;
   ============================================ */
 @mixin box-overlay() {
    -webkit-box-shadow: $generic-box-shadow;
-           box-shadow: $generic-box-shadow;
-   position: absolute;
-   width: 100%;
-   z-index: 1;
-   top: 85px;
-   border-radius: 3px;
+   box-shadow        : $generic-box-shadow;
+   position          : absolute;
+   width             : 100%;
+   z-index           : 1;
+   top               : 85px;
+   border-radius     : 3px;
 } 
 
 @mixin va($va-align: center) {
@@ -149,15 +151,15 @@ $generic-bg: #4AA4B2;
    }
 
    header {
-      -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
       background-color: #343542;
       border-color: transparent;
    }
 
    .sidebar {
-      -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.30);
+      -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.50);
       background-color: #6A6B73;
       border-color: transparent;
       color:#F2F2F2;
@@ -190,30 +192,117 @@ $generic-bg: #4AA4B2;
       color:white;
    }
 
-   .inbox {
+   .inbox-action {
       color: white;
    }
+
+   img {
+      margin-top   : 6px;
+      width        : 90px;
+      height       : 60px;
+      border       : 1px solid white;
+      border-radius: 10px;
+      box-shadow   : 1px 1px 1px 1px rgba(255, 255, 255, 0.502);
+   }
+
+   .aside-right {
+      border: 1px solid grey;
+      border-radius: 5px;
+      margin-left: 922px;
+      margin-top: -1910px;
+      width: 264px;
+      height: 1910px;
+      font-size: 10px;
+      float: right;
+      background-color: #6A6B73;
+
+   }
+
+   .name-header {
+      border: 1px solid white;
+      border-radius: 5px;
+      width: 350px;
+      height: 45px;
+      font-family: 'Raleway';
+      font-size: 15px;
+      text-shadow: 1px 2px 2px black;
+      color: white;
+      font-weight: 200;
+      text-align: center;
+      margin-left: 300px;
+      margin-top: -85px;
+
+      h1 {
+         margin-top: 10px;
+      }
+
+      @include mq('900px') {
+         width: 250px;
+         height: 35px;
+         margin-left: 120px;
+         margin-top: -90px;
+         font-size: 10px;
+         text-align: center;
+
+      }
+
+   }
   
+   
    
 }
 
 /* HEADER
   ============================================ */
 header {
-   border-bottom: solid 1px #4AA4B2;
+   border-bottom: solid 1px black;
    background-color: $generic-bg;
    -webkit-transition: height 200ms ease-in;
    transition: height 200ms ease-in;
    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-   height: 60px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+   height: 55px;
    z-index: 400;
    position: fixed;
    top: 0;
    width: 100%;
 
+
+.name-header {
+   border: 1px solid black;
+   border-radius: 5px;
+   width: 350px;
+   height: 45px;
+   font-family: 'Raleway';
+   font-size: 15px;
+   text-shadow: 1px 2px 2px black;
+   color: white;
+   font-weight: 200;
+   text-align: center;
+   margin-left: 350px;
+   margin-top: -85px;
+
+   h1{ 
+      margin-top: 8px;
+   }
+
+@include mq('900px') {
+   width: 250px;
+   height: 35px;
+   margin-left: 120px;
+   margin-top: -90px;
+   font-size: 10px;
+   text-align: center;
+
+}
+
+}
+
+
+
    @include mq('900px') {
       padding: 0 10px;
+      height: 45px;
    }
 
    nav {
@@ -240,18 +329,22 @@ header {
             grid-area: 1 / 1;
 
             img {
+               margin-top: 6px;
                width: 90px;
                height: 60px;
                border: 1px solid black;
                border-radius: 10px;
-               box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+               box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.502);
             }
 
          }
 
+
          &.settings {
             grid-area: 1 / 2;
             text-align: right;
+            
+
 
             ul {
                float: right;
@@ -259,6 +352,7 @@ header {
 
             ul li {
                @include va;
+               
 
                list-style-type: none;
                cursor: pointer;
@@ -276,13 +370,27 @@ header {
                &.settings__add {
                   margin-right: 15px;
                   font-size: 30px;
+                  
 
                   button {
                      @include transparent-button();
                      color: white;
                      cursor: pointer;
+                     margin-left: 100px;
+                     margin-top: -10px;
                   }
+
+                  @include mq('900px') {
+                     button {
+                        margin-left: 50px;
+                        margin-top: -20px;
+                     }
+
+                  }
+
+
                }
+               
 
                &.settings__darkmode {
                   button {
@@ -292,27 +400,143 @@ header {
                      display: -webkit-box;
                      display: -ms-flexbox;
                      display: flex;
-
-                     svg {
-                        width: 20px;
-                        height: 20px;
-                     }
+                     margin-left: 100px;
+                     margin-top: -10px;
+                     
                   }
 
                }
             }
+
+            @include mq('900px') {
+               &.settings__darkmode {
+                  margin-left: -200px;
+               }
+
+            }
+
+
          }
       }
    }
 }
 
+/* ASIDE
+  ============================================ */
+p {
+   font-weight: 700;
+}
+
+
+.react-calendar {
+   // border: 2px solid red;
+   border-radius: 20px;
+   width: 380px;
+   height: 430px;
+   margin-top: 0px;
+   margin-left: 7px;
+}
+
+  .calendar {
+   @include no-select();
+   position: fixed;
+   border-right: $generic-border;
+   border: 2px solid #808080a1;
+   border-radius: 20px;
+   margin-left: 931px;
+   margin-top: -1240px;
+   width: 400px;
+   height: 520px;
+   font-size: 20px;
+   text-align: center;
+   font-weight: 400;
+   font-family: 'Montserrat';
+   background-color: #E9E8E1;
+   
+}
+
+.react-calendar__month-view__weekdays {
+   color: blue;
+}
+
+ .react-calendar__month-view__days__day {
+  color: blue;
+}
+
+.react-calendar__month-view__days__day--weekend {
+color: red;
+}
+//=============================================
+
+
+.notifications {
+   border: 1px solid red;
+   @include no-select();
+   position: fixed;
+   border-right: $generic-border;
+   border: 2px solid #808080a1;
+   border-radius: 20px;
+   margin-left: 931px;
+   margin-top: -710px;
+   width: 400px;
+   height: 290px;
+   font-size: 20px;
+   text-align: center;
+   font-weight: 500;
+   font-family: 'Montserrat';
+   background-color: #E9E8E1;
+
+}
+
+
+
+
+
+//=============================================
+.stopwatch {
+   @include no-select();
+   position: fixed;
+   border-right: $generic-border;
+   border: 2px solid #808080a1;
+   border-radius: 20px;
+   margin-left: 931px;
+   margin-top: -410px;
+   width: 400px;
+   height: 400px;
+   font-size: 20px;
+   text-align: center;
+   font-weight: 500;
+   font-family: 'Montserrat';
+   background-color: #E9E8E1;
+}
+
+.stopwatch {
+   // border: 1px solid red;
+   margin-top: -410px;
+}
+
+.fastop svg  {
+   width: 200px;
+   height: 200px;
+   margin-top: 50px;
+}
+   
+
+
+   
+
+
 /* SIDEBAR
   ============================================ */
 .sidebar {
    @include no-select();
-   width: 266px;
-   height: calc(100vh);
-   padding-top: 74px;
+   width: 264px;
+   height: 1000px;
+   border: 1px solid grey;
+   border-radius: 5px;
+   margin-left: -6px;
+   border-radius: 20px;
+   padding-top: 100px;
    position: fixed;
    overflow-x: hidden;
    overflow-y: hidden;
@@ -320,7 +544,9 @@ header {
    background-color: #E9E8E1;
 
    @include mq('900px') {
-      display: none;
+      display: inline;
+      width: 150px;
+      height: 100%;
    }
 
    li {
@@ -561,6 +787,8 @@ header {
 /* MAIN CONTENT
   ============================================ */
 .content {
+   // width: 890px;
+   
    display: grid;
    -webkit-box-align: center;
    -ms-flex-align: center;
@@ -578,7 +806,7 @@ header {
    background-color: #F2F2F2;
    margin-left: 266px;
    border-right: $generic-border;
-   min-height: calc(100vh);
+   height: calc(100vh);
    vertical-align: top;
    padding-left: 40px;
    padding-right: 40px;
@@ -586,8 +814,11 @@ header {
    padding-bottom: 84px;
 
    @include mq('900px') {
-      margin-left: 0;
-      width: auto;
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-left: 152px;
+      margin-top: 10px;
    }
 
    h2 {
@@ -840,10 +1071,11 @@ header {
 /* FOOTER
   ============================================ */
 .footer {
-   margin-top: 998px;
-   margin-left: -500px;
-   font-family: "Roboto", sans-serif;
-   font-size: 12px;
+   text-align: center;
+   margin-top: 1270px;
+   margin-left: -650px;
+   font-family: "Raleway";
+   font-size: 10px;
    font-weight: 100;
 }
 

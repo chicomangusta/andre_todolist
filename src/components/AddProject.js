@@ -74,7 +74,7 @@ export const AddProject = ({ shouldShow = false }) => {
         role="button"
         tabIndex={0}
       >
-        Add Project
+        🚜 New Project 🚜
       </span>
     </div>
   );
