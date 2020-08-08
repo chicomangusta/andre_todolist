@@ -37,7 +37,7 @@ export const Sidebar = () => {
             <span>
               <FaInbox />
             </span>
-            <span>Inbox</span>
+            <span>Today</span>
           </div>
         </li>
         <li
@@ -63,7 +63,7 @@ export const Sidebar = () => {
             <span>
               <FaRegCalendar />
             </span>
-            <span>Today</span>
+            <span>This Week</span>
           </div>
         </li>
         <li
