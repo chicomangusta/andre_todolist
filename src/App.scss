@@ -376,8 +376,6 @@ header {
                      @include transparent-button();
                      color: white;
                      cursor: pointer;
-                     margin-left: 100px;
-                     margin-top: -10px;
                   }
 
                   @include mq('900px') {
@@ -400,8 +398,11 @@ header {
                      display: -webkit-box;
                      display: -ms-flexbox;
                      display: flex;
-                     margin-left: 100px;
-                     margin-top: -10px;
+
+                      svg {
+                         width: 20px;
+                         height: 20px;
+                      }
                      
                   }
 

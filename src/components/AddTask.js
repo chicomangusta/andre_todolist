@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FaRegListAlt, FaRegCalendarAlt } from 'react-icons/fa';
-import moment from 'moment'; // 
+import moment from 'moment'; // to set timezones
 import PropTypes from 'prop-types';
 import { firebase } from '../firebase';
 import { useSelectedProjectValue } from '../context';
