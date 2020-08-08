@@ -1,6 +1,6 @@
 import React                                      from 'react';
 import moment                                     from 'moment';
-import { FaSpaceShuttle, FaSun, FaRegPaperPlane } from 'react-icons/fa';
+import { FaRocket, FaBolt, FaPizzaSlice } from 'react-icons/fa';
 import PropTypes                                  from 'prop-types';
 
 export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
@@ -25,7 +25,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
             role="button"
           >
             <span>
-              <FaSpaceShuttle />
+              <FaRocket />
             </span>
             <span>Today</span>
           </div>
@@ -48,7 +48,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
             aria-label="Select tomorrow as the task date"
           >
             <span>
-              <FaSun />
+              <FaBolt />
             </span>
             <span>Tomorrow</span>
           </div>
@@ -71,7 +71,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
             role="button"
           >
             <span>
-              <FaRegPaperPlane />
+              <FaPizzaSlice />
             </span>
             <span>Next week</span>
           </div>

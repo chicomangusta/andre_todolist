@@ -1,18 +1,20 @@
 //REACT HOOKS
+//They let you use state and other React features without writing a class.
 //============================================================
 
 import { useState, useEffect } from 'react';
 import moment                  from 'moment';
 import { firebase }            from '../firebase';
 import { collatedTasksExist }  from '../helpers';
+
 //============================================================
 
 
 export const useTasks = selectedProject => {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState([]); //iniciar state com empty array
     const [archivedTasks, setArchivedTasks] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => {// permite usar no main body do React
         let unsubscribe = firebase
           .firestore()
           .collection('tasks')
@@ -25,7 +27,7 @@ export const useTasks = selectedProject => {
         ? (unsubscribe = unsubscribe.where('date', '==', moment().format('DD/MM/YYYY')))//moment() to manage time zones
         : selectedProject === 'INBOX' || selectedProject === 0 
         ? (unsubscribe = unsubscribe.where('date', '==', '')) 
-        :unsubscribe;// GO THRU ALL THE TASKS AND SELECT THE KEY AND GIVE ME THE PROJECTS
+        :unsubscribe;// GO THRU ALL THE TASKS AND SELECT THE KEY AND GIVE THE PROJECTS
 
     unsubscribe = unsubscribe.onSnapshot(snapshot => {
           const newTasks = snapshot.docs.map(task => ({
