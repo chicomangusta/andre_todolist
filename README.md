@@ -19,7 +19,7 @@
 
 ![](https://res.cloudinary.com/dqiighjqq/image/upload/v1596572513/wire2_zo8xte.png)
 
-### **APP FINAL VERSION:**
+### **APP FIRST VERSION:**
 
 ![](https://res.cloudinary.com/dqiighjqq/image/upload/v1596572732/2du_final_szkvgb.png)
 

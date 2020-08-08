@@ -497,7 +497,7 @@ color: red;
 .stopwatch {
    @include no-select();
    position: fixed;
-   border-right: $generic-border;
+   // border-right: $generic-border;
    border: 2px solid #858690;
    border-radius: 20px;
    margin-left: 931px;
