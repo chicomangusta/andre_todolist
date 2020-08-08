@@ -442,7 +442,7 @@ p {
    @include no-select();
    position: fixed;
    border-right: $generic-border;
-   border: 2px solid #808080a1;
+   border: 2px solid #858690;
    border-radius: 20px;
    margin-left: 931px;
    margin-top: -1240px;
@@ -475,7 +475,7 @@ color: red;
    @include no-select();
    position: fixed;
    border-right: $generic-border;
-   border: 2px solid #808080a1;
+   border: 2px solid #858690;
    border-radius: 20px;
    margin-left: 931px;
    margin-top: -710px;
@@ -498,7 +498,7 @@ color: red;
    @include no-select();
    position: fixed;
    border-right: $generic-border;
-   border: 2px solid #808080a1;
+   border: 2px solid #858690;
    border-radius: 20px;
    margin-left: 931px;
    margin-top: -410px;
@@ -533,7 +533,7 @@ color: red;
    @include no-select();
    width: 380px;
    height: 1000px;
-   border: 1px solid grey;
+   border: 2px solid #858690;
    border-radius: 5px;
    margin-left: -130px;
    border-radius: 20px;
@@ -541,7 +541,7 @@ color: red;
    position: fixed;
    overflow-x: hidden;
    overflow-y: hidden;
-   border-right: $generic-border;
+   // border-right: $generic-border;
    background-color: #E9E8E1;
 
    @include mq('900px') {
@@ -803,10 +803,11 @@ color: red;
   ============================================ */
 .tasks {
    background: rgba(102, 102, 102, 0.5);
+   border: 2px solid #858690;
    width: 656px;
    background-color: #F2F2F2;
    margin-left: 266px;
-   border-right: $generic-border;
+   // border-right: $generic-border;
    height: calc(100vh);
    vertical-align: top;
    padding-left: 40px;
