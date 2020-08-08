@@ -531,11 +531,11 @@ color: red;
   ============================================ */
 .sidebar {
    @include no-select();
-   width: 264px;
+   width: 380px;
    height: 1000px;
    border: 1px solid grey;
    border-radius: 5px;
-   margin-left: -6px;
+   margin-left: -130px;
    border-radius: 20px;
    padding-top: 100px;
    position: fixed;
