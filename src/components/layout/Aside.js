@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
+import Calendar            from 'react-calendar';
+import { FaStopwatch }     from 'react-icons/fa';
 // import Clock from "react-clock";
-import { FaStopwatch } from 'react-icons/fa';
 
 
 

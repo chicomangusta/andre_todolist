@@ -1,12 +1,12 @@
 //UPDATE
 //===================================================================
-import React, { useState } from 'react';
-import { FaEdit } from 'react-icons/fa';
+import React, { useState }                           from 'react';
+import { FaEdit }                                    from 'react-icons/fa';
 import { useProjectsValue, useSelectedProjectValue } from '../context';
-import { firebase } from '../firebase'
-import { generatePushId } from '../helpers';
-import { useProjectsValue } from '../context';
-import PropTypes from 'prop-types';
+import { firebase }                                  from '../firebase'
+import { generatePushId }                            from '../helpers';
+import { useProjectsValue }                          from '../context';
+import PropTypes                                     from 'prop-types';
 
 
 

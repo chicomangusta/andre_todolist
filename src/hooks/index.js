@@ -2,9 +2,9 @@
 //============================================================
 
 import { useState, useEffect } from 'react';
-import moment from 'moment';
-import { firebase } from '../firebase';
-import { collatedTasksExist } from '../helpers';
+import moment                  from 'moment';
+import { firebase }            from '../firebase';
+import { collatedTasksExist }  from '../helpers';
 //============================================================
 
 

@@ -1,10 +1,10 @@
 //DELETE
 
-import React, { useState } from 'react';
-import { FaTrashAlt } from 'react-icons/fa';
+import React, { useState }                           from 'react';
+import { FaTrashAlt }                                from 'react-icons/fa';
 import { useProjectsValue, useSelectedProjectValue } from '../context';
-import { firebase } from '../firebase'
-import PropTypes from 'prop-types';
+import { firebase }                                  from '../firebase'
+import PropTypes                                     from 'prop-types';
 
 
 export const IndividualProject = ({ project }) => {
